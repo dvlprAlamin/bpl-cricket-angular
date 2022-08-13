@@ -1,0 +1,8 @@
+<div class="added-players sticky-top pt-2">
+    <h3> Players Added : {{addedPlayers.length}}</h3>
+    <h4>Total Cost : {{getSalary()}}</h4>
+    <ng-container *ngFor="let singleAddedPlayer of addedPlayers">
+        <app-added-single-player (removeEmitter)="removePlayer($event)" [singleAddedPlayer]="singleAddedPlayer">
+        </app-added-single-player>
+    </ng-container>
+</div>

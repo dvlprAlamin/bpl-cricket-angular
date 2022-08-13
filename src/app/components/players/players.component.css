@@ -1,0 +1,27 @@
+.main{
+    font-family: "Montserrat", sans-serif;
+    background: url("https://i.ibb.co/J7SPdSb/stadium.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+.players{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,260px);
+    gap: 1.75rem;
+    margin: 1.5rem 0;
+}
+@media (max-width:1200px){
+    .players{
+        grid-template-columns: repeat(2,260px);
+    }
+}
+@media (max-width:990px){
+    .players{
+        grid-template-columns: 260px;
+    }
+}

@@ -1,0 +1,5 @@
+<div class="added-player">
+    <img [src]="singleAddedPlayer.image" [alt]="singleAddedPlayer.name" />
+    <span class="player-name"> {{singleAddedPlayer.name}}</span>
+    <span (click)="removePlayer(singleAddedPlayer.id)" class="remove-player">✖</span>
+</div>

@@ -1,0 +1,11 @@
+.added-players {
+    margin: 0.5rem 0;
+  }
+  .added-players h3,
+  h4 {
+    color: #ffa253;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgb(14, 14, 14);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }

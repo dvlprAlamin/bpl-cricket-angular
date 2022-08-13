@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="container">
+        <div class="players-container row">
+            <div class="players col-lg-9 col-md-8 col-sm-7 col-xs-6">
+                <ng-container *ngFor="let player of players">
+                    <app-player (playerEmitter)="addPlayerToCart($event)" [player]="player"></app-player>
+                </ng-container>
+            </div>
+            <div class="added-players col-lg-3 col-md-4 col-sm-5 col-xs-6">
+                <app-added-players (removeEmitter)="removePlayer($event)" [addedPlayers]="addedPlayers">
+                </app-added-players>
+            </div>
+        </div>
+    </div>
+</div>

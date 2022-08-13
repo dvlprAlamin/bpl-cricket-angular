@@ -1,0 +1,19 @@
+.header{
+    background: rgba(255, 255, 255, 0.849);
+    border-radius: 0 0 10px 10px;
+    padding: 0 10px;
+}
+.header h1{
+    color:rgb(30, 165, 151);
+}
+.header h5{
+    color:#1c9488;
+}
+@media (max-width:440px){
+    .header h1{
+        font-size: 1.2rem;
+    }
+    .header h5{
+        font-size: .9rem;
+    }
+}
