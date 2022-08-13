@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { CartService } from './../../services/cart.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { player } from 'src/app/types';
 
 @Component({
@@ -8,14 +9,10 @@ import { player } from 'src/app/types';
 })
 export class PlayerComponent implements OnInit {
   @Input() player: player = {} as player;
-  @Output() playerEmitter = new EventEmitter<player>();
-  constructor() {
-
-  }
-
+  constructor(private CartService: CartService) { }
   ngOnInit(): void {
   }
   addSinglePlayer(player: player) {
-    this.playerEmitter.emit(player)
+    this.CartService.add(player);
   }
 }

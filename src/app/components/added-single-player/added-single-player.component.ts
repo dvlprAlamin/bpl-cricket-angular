@@ -1,3 +1,4 @@
+import { CartService } from './../../services/cart.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { player } from 'src/app/types';
 
@@ -8,12 +9,11 @@ import { player } from 'src/app/types';
 })
 export class AddedSinglePlayerComponent implements OnInit {
   @Input() singleAddedPlayer: player = {} as player;
-  @Output() removeEmitter = new EventEmitter<number>();
-  constructor() { }
+  constructor(private CartService: CartService) { }
 
   ngOnInit(): void {
   }
   removePlayer(id: number) {
-    this.removeEmitter.emit(id)
+    this.CartService.remove(id)
   }
 }

@@ -12,17 +12,5 @@ export class PlayersComponent implements OnInit {
   addedPlayers: player[] = [];
   constructor() { }
 
-  ngOnInit(): void {
-  }
-  addPlayerToCart(player: player) {
-    const exist = this.addedPlayers.find(({ id }) => id === player.id);
-    if (exist) {
-      alert("This player already added!");
-    } else {
-      this.addedPlayers.push(player)
-    }
-  }
-  removePlayer(id: number) {
-    this.addedPlayers = this.addedPlayers.filter((player) => player.id !== id)
-  }
+  ngOnInit(): void { }
 }
